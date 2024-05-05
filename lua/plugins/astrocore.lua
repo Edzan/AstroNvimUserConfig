@@ -1,5 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
@@ -32,6 +30,14 @@ return {
         spell = false, -- sets vim.opt.spell
         signcolumn = "auto", -- sets vim.opt.signcolumn to auto
         wrap = false, -- sets vim.opt.wrap
+
+        spelllang = { "en_us", "ru_yo" },
+        encoding = "utf-8",
+        keymap = "russian-jcukenwin",
+        iminsert = 0,
+        imsearch = 0,
+        -- Neovide config
+        guifont = "JetBrainsMono_NF:h10",
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)

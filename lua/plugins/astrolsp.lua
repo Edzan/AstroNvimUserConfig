@@ -12,7 +12,7 @@ return {
   opts = {
     -- Configuration table of features provided by AstroLSP
     features = {
-      autoformat = true, -- enable or disable auto formatting on start
+      autoformat = false, -- enable or disable auto formatting on start
       codelens = true, -- enable/disable codelens refresh on start
       inlay_hints = false, -- enable/disable inlay hints on start
       semantic_tokens = true, -- enable/disable semantic token highlighting
@@ -46,6 +46,23 @@ return {
     ---@diagnostic disable: missing-fields
     config = {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
+      rust_analyzer = {
+        settings = {
+          ["rust-analyzer"] = {
+            checkOnSave = {
+              allFeatures = true,
+              overrideCommand = {
+                "cargo",
+                "clippy",
+                "--workspace",
+                "--message-format=json",
+                "--all-targets",
+                "--all-features",
+              },
+            },
+          },
+        },
+      },
     },
     -- customize how language servers are attached
     handlers = {
