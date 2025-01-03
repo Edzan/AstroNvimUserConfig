@@ -11,4 +11,10 @@ return {
       }
     end,
   },
+  {
+    "pest-parser/pest.vim",
+    config = function()
+      require('pest-vim').setup {}
+    end,
+  },
 }
