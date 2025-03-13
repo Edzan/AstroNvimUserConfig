@@ -9,5 +9,6 @@ return {
   -- import/override with your plugins folder
   { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.pack.rust" },
-  
+  { import = "astrocommunity.pack.go" },
+  { import = "astrocommunity.pack.html-css" },
 }
